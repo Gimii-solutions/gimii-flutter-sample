@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "didomi-ios-sdk-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/didomi/didomi-ios-sdk-spm",
+      "state" : {
+        "revision" : "4ba4a46e51acea503345bef22c8f2c53e75827c6",
+        "version" : "2.49.0"
+      }
+    },
+    {
+      "identity" : "gimii-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gimii-solutions/gimii-ios-sdk",
+      "state" : {
+        "revision" : "a30ddd07391761d4ca61a096a3a55deb99efa9a3",
+        "version" : "1.1.0-beta4"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads",
+      "state" : {
+        "revision" : "54efe6d39a7b41b84c1041f21c704a7e6a493d7a",
+        "version" : "13.9.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
+        "version" : "3.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
