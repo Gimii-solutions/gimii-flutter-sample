@@ -693,7 +693,7 @@ right after the emulator boots is common. Call `execute` again.
 
 | | Android | iOS |
 |---|---|---|
-| Gimii native SDK | `1.1.0-beta4` | `1.1.0-beta4` |
+| Gimii native SDK | `1.1.0-beta5` | `1.1.0-beta4` |
 | Didomi | `2.26.0` or higher | `2.30.0` up to `3.0.0` (excluded) |
 | Google Mobile Ads | `play-services-ads 23.5.0` or higher | `12.0.0` up to `14.0.0` (excluded) |
 
