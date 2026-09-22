@@ -121,14 +121,32 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                   const SizedBox(height: 6),
-                  OutlinedButton(
-                    onPressed: () => _run('adTargeting', () async {
-                      final tags = await Gimii.adTargeting();
-                      return tags.isEmpty
-                          ? 'no tags yet (no charity selected)'
-                          : tags.entries.map((e) => '${e.key}=${e.value}').join(', ');
-                    }),
-                    child: const Text('Ad targeting'),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () => _run('adTargeting', () async {
+                            final tags = await Gimii.adTargeting();
+                            return tags.isEmpty
+                                ? 'no tags yet (no charity selected)'
+                                : tags.entries.map((e) => '${e.key}=${e.value}').join(', ');
+                          }),
+                          child: const Text('Ad targeting'),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      // Back to a fresh install: consent notice and pop-in show again.
+                      OutlinedButton(
+                        onPressed: () {
+                          setState(() {
+                            _taps = 0;
+                            _log.clear();
+                          });
+                          _run('reset', Gimii.reset);
+                        },
+                        child: const Text('Reset'),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 6),
                   Align(
