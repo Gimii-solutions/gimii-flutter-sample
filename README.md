@@ -116,6 +116,7 @@ the event log says so and the SDK is not initialized.
 | **Show Gimii** | Calls `Gimii.execute()` — displays the pop-in if all conditions are met |
 | **Dismiss** | Calls `Gimii.dismiss()` |
 | **Ad targeting** | Displays the keys returned by `Gimii.adTargeting()` |
+| **Reset** | Calls `Gimii.reset()` — forgets the consent and display delays, to test again without reinstalling |
 | **Event log** (dark panel) | Every SDK event, as it arrives. Your main debugging tool. |
 | **List** + **List taps** counter | Lets you check that touches go through the pop-in's transparent areas |
 
@@ -128,6 +129,7 @@ the event log says so and the SDK is not initialized.
 4. Tap **I accept (for free)**, then pick a charity. The log shows
    `charity selected`, and a thank-you screen appears before closing on its own.
 5. Tap **Ad targeting**. The log now shows the three targeting keys.
+6. Tap **Reset** to start over: the notice and the pop-in show again.
 
 ---
 
