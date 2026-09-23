@@ -122,14 +122,15 @@ the event log says so and the SDK is not initialized.
 
 ### A quick tour
 
-1. Launch the app. The log shows `initialize ✓`.
-2. Tap **Show Gimii**. The Didomi consent notice appears.
-3. Tap **Disagree & Close**. The Gimii pop-in appears over the app, and the log
+1. Launch the app. The log shows `initialize ✓` then `execute ✓`, and the
+   Didomi consent notice appears.
+2. Tap **Disagree & Close**. The Gimii pop-in appears over the app, and the log
    shows `pop-in displayed`.
-4. Tap **I accept (for free)**, then pick a charity. The log shows
+3. Tap **I accept (for free)**, then pick a charity. The log shows
    `charity selected`, and a thank-you screen appears before closing on its own.
-5. Tap **Ad targeting**. The log now shows the three targeting keys.
-6. Tap **Reset** to start over: the notice and the pop-in show again.
+4. Tap **Ad targeting**. The log now shows the three targeting keys.
+5. Tap **Reset**, then **Show Gimii** to start over: the notice and the pop-in
+   show again.
 
 ---
 

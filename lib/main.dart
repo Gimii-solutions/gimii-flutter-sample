@@ -75,6 +75,9 @@ class _HomeState extends State<Home> {
         debug: true,
       ),
     );
+    // As in the native samples: the consent notice appears at startup, and
+    // Gimii runs as soon as the user refuses it.
+    await _run('execute', Gimii.execute);
   }
 
   Future<void> _run(String label, Future<Object?> Function() action) async {
