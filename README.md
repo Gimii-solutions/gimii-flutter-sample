@@ -113,8 +113,8 @@ the event log says so and the SDK is not initialized.
 
 | Element | Purpose |
 |---|---|
-| **Show Gimii** | Calls `Gimii.execute()` — displays the pop-in if all conditions are met |
-| **Dismiss** | Calls `Gimii.dismiss()` |
+| **Run Gimii** | Calls `Gimii.execute()` — runs the SDK; the pop-in appears only if the consent and the display delay allow it |
+| **Hide** / **Show** | Call `Gimii.dismiss()` and `Gimii.show()` — hide and bring back a pop-in that is already displayed. The default pop-in covers the screen and captures every touch, so these two are only reachable in remind mode |
 | **Ad targeting** | Displays the keys returned by `Gimii.adTargeting()` |
 | **Reset** | Calls `Gimii.reset()` — forgets the consent and display delays, to test again without reinstalling |
 | **Event log** (dark panel) | Every SDK event, as it arrives. Your main debugging tool. |
@@ -125,11 +125,12 @@ the event log says so and the SDK is not initialized.
 1. Launch the app. The log shows `initialize ✓` then `execute ✓`, and the
    Didomi consent notice appears.
 2. Tap **Disagree & Close**. The Gimii pop-in appears over the app, and the log
-   shows `pop-in displayed`.
+   shows `pop-in displayed`. A user who taps **Agree & Close** instead is not
+   shown the pop-in: Gimii only runs for those who refuse.
 3. Tap **I accept (for free)**, then pick a charity. The log shows
    `charity selected`, and a thank-you screen appears before closing on its own.
 4. Tap **Ad targeting**. The log now shows the three targeting keys.
-5. Tap **Reset**, then **Show Gimii** to start over: the notice and the pop-in
+5. Tap **Reset**, then **Run Gimii** to start over: the notice and the pop-in
    show again.
 
 ---

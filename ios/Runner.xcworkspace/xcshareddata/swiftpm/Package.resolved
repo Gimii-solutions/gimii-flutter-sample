@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gimii-solutions/gimii-ios-sdk",
       "state" : {
-        "revision" : "a30ddd07391761d4ca61a096a3a55deb99efa9a3",
-        "version" : "1.1.0-beta4"
+        "revision" : "3fd93068503a72321d6205ee4a30155baadfd2ec",
+        "version" : "1.1.0-beta5"
       }
     },
     {

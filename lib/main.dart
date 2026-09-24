@@ -109,17 +109,25 @@ class _HomeState extends State<Home> {
                 children: [
                   Row(
                     children: [
+                      // Runs the SDK: the pop-in appears only if the consent
+                      // and the display delay allow it.
                       Expanded(
                         child: FilledButton.icon(
                           onPressed: () => _run('execute', Gimii.execute),
                           icon: const Icon(Icons.play_arrow, size: 18),
-                          label: const Text('Show Gimii'),
+                          label: const Text('Run Gimii'),
                         ),
                       ),
                       const SizedBox(width: 8),
+                      // Hides and brings back a pop-in that is already displayed.
                       OutlinedButton(
                         onPressed: () => _run('dismiss', Gimii.dismiss),
-                        child: const Text('Dismiss'),
+                        child: const Text('Hide'),
+                      ),
+                      const SizedBox(width: 8),
+                      OutlinedButton(
+                        onPressed: () => _run('show', Gimii.show),
+                        child: const Text('Show'),
                       ),
                     ],
                   ),
