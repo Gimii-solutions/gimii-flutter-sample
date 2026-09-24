@@ -114,9 +114,8 @@ the event log says so and the SDK is not initialized.
 | Element | Purpose |
 |---|---|
 | **Run Gimii** | Calls `Gimii.execute()` — runs the SDK; the pop-in appears only if the consent and the display delay allow it |
-| **Hide** / **Show** | Call `Gimii.dismiss()` and `Gimii.show()` — hide and bring back a pop-in that is already displayed. The default pop-in covers the screen and captures every touch, so these two are only reachable in remind mode |
+| **Reset** | Calls `Gimii.reset()` — forgets the consent and display delays. Tap it, then **Run Gimii**, to see the pop-in again |
 | **Ad targeting** | Displays the keys returned by `Gimii.adTargeting()` |
-| **Reset** | Calls `Gimii.reset()` — forgets the consent and display delays, to test again without reinstalling |
 | **Event log** (dark panel) | Every SDK event, as it arrives. Your main debugging tool. |
 | **List** + **List taps** counter | Lets you check that touches go through the pop-in's transparent areas |
 

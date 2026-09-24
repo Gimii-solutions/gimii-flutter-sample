@@ -118,17 +118,6 @@ class _HomeState extends State<Home> {
                           label: const Text('Run Gimii'),
                         ),
                       ),
-                      const SizedBox(width: 8),
-                      // Hides and brings back a pop-in that is already displayed.
-                      OutlinedButton(
-                        onPressed: () => _run('dismiss', Gimii.dismiss),
-                        child: const Text('Hide'),
-                      ),
-                      const SizedBox(width: 8),
-                      OutlinedButton(
-                        onPressed: () => _run('show', Gimii.show),
-                        child: const Text('Show'),
-                      ),
                     ],
                   ),
                   const SizedBox(height: 6),
