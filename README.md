@@ -30,7 +30,7 @@ Do not assume an older published package contains these source changes.
 - Flutter/Dart compatible with this app's manifest (`sdk: ^3.13.2`) and the
   selected plugin's native toolchain requirements.
 - Android: a supported JDK/SDK and `FlutterFragmentActivity`. Check the selected
-  native artifact's minimum API; current source builds require API 26+.
+  native artifact's minimum API; current source builds require API 24+.
 - iOS: a compatible Xcode, Swift Package Manager, and at least iOS 13 or the
   higher deployment target required by selected dependencies.
 - A staging raiser ID, Didomi API key/notice ID, and your own Google Mobile Ads
