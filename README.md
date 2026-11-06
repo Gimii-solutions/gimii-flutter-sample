@@ -1,29 +1,30 @@
 # Gimii Flutter sample
 
-This app demonstrates the adjacent `gimii_flutter` SDK, with a native pop-in,
+This app demonstrates the published `gimii_flutter` SDK, with a native pop-in,
 activity log, targeting display, reset control, and a scrolling/tap probe.
 The integration reference is the
 [Flutter SDK guide](https://github.com/Gimii-solutions/gimii-flutter/blob/main/README.md).
 
-## Source dependencies
+## Dependencies and optional source development
 
-[pubspec.yaml](pubspec.yaml) selects `../gimii-flutter`, so SDK changes and this
-sample are tested together. Clone that repository next to this one. The smaller
-[bundled example](https://github.com/Gimii-solutions/gimii-flutter/blob/main/example/README.md)
-uses the same API and configuration values.
+[pubspec.yaml](pubspec.yaml) selects hosted `gimii_flutter: ^1.1.4`. This release
+defaults to Android `1.1.0-beta7` and iOS `1.1.0-beta6`, including reset and
+embedder fixes. No sibling SDK checkout or native source override is required.
+The smaller [bundled example](https://github.com/Gimii-solutions/gimii-flutter/blob/main/example/README.md)
+retains `path: ../` for plugin development and uses the same configuration values.
 
-A Dart path dependency still resolves published native SDKs unless native
-source overrides are set. For this unreleased reset/embedder work, select the
-adjacent native source modules before building:
+For optional SDK development, replace the hosted dependency with a path to a
+local `gimii-flutter` checkout. A Dart path dependency still resolves published
+native SDKs unless source overrides are set. To test native source changes too,
+select the adjacent native source modules before building:
 
 ```sh
 export GIMII_ANDROID_SDK_PATH=/path/to/gimii-mobile/gimii-android/gimii-android
 export GIMII_IOS_SDK_PATH=/path/to/gimii-mobile/gimii-ios/gimii-ios
 ```
 
-To test a published plugin instead, replace the path dependency with the desired
-pub.dev version, resolve packages again, and verify its native compatibility.
-Do not assume an older published package contains these source changes.
+To return to the released setup, restore `gimii_flutter: ^1.1.4`, unset the
+native source overrides, and resolve packages again.
 
 ## Requirements
 
@@ -116,10 +117,9 @@ keys to each new request using their ads plugin.
 | `staging` | `https://api.staging.gimii.fr` | `https://static.staging.gimii.fr` |
 | `production` | `https://api.gimii.fr` | `https://static.gimii.fr` |
 
-This sample selects staging. Published native artifacts must contain these
-mappings before their behavior matches the current source. A debug flag does
-not switch the environment, and switching environments does not migrate local
-consent/charity preferences.
+This sample selects staging. The default native releases include these
+mappings. A debug flag does not switch the environment, and switching
+environments does not migrate local consent/charity preferences.
 
 ## Verify the integration
 
@@ -157,7 +157,7 @@ repositories; widget tests do not validate a live consent/backend configuration.
 | --- | --- |
 | Missing configuration log | `.env` next to `pubspec.yaml`, exact key names, and `--dart-define-from-file=.env` on a fresh run |
 | No display and no event | CMP readiness/answer, capping, server flags, and native logs |
-| Unknown `reset` or another Dart method | Local plugin path, native source overrides, and compatible release versions |
+| Unknown `reset` or another Dart method | Resolved plugin/native versions and any optional source overrides |
 | Minimum platform error | Selected native artifact requirements and host build settings |
 | iOS package/link failure | SwiftPM, compatible native versions, host `-ObjC`, and duplicate manual package references |
 | Android startup/manifest error | `FlutterFragmentActivity` and the host's own ad application ID |

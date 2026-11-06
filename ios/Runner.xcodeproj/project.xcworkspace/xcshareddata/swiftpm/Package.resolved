@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/didomi/didomi-ios-sdk-spm",
       "state" : {
-        "revision" : "c696b0a8cac3a43b1df37c5d3d3ccf2c6895e13b",
-        "version" : "2.50.1"
+        "revision" : "75ba198e00139e900b6100ae5e3346a84d29203c",
+        "version" : "2.53.1"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gimii-solutions/gimii-ios-sdk",
       "state" : {
-        "revision" : "3fd93068503a72321d6205ee4a30155baadfd2ec",
-        "version" : "1.1.0-beta5"
+        "revision" : "c3abc8e21863272548410033bc6649705af00775",
+        "version" : "1.1.0-beta6"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads",
       "state" : {
-        "revision" : "12b7af0f844723a86fd3c0089b02f64b1e495605",
-        "version" : "13.10.0"
+        "revision" : "f6308a186913b186bdc8baf87d098206ecd75ace",
+        "version" : "13.12.0"
       }
     },
     {
